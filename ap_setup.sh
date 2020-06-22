@@ -93,7 +93,7 @@ sh -c "iptables-save > /etc/iptables.ipv4.nat"
 
 # Load the rule on boot by adding this line above exit 0 in /etc/rc.local
 echo Making sure rule loads on boot...
-sed -i '.txt' 's|^exit 0*|iptables-restore < /etc/iptables.ipv4.nat|g' /etc/rc.local
+sed -i 's|^exit 0*|iptables-restore < /etc/iptables.ipv4.nat|g' /etc/rc.local
 echo exit 0 >> /etc/rc.local
 echo Rule loads on boot!
 

@@ -39,7 +39,7 @@ echo ">>>>>>>>>>>>>>>>>>>> Configuration writen to file successfuly! <<<<<<<<<<<
 # Change name of current dnsmasq config file
 echo ">>>>>>>>>>>>>>>>>>>> Renaming dnsmasq.conf to dnsmasq.conf.original in /etc... <<<<<<<<<<<<<<<<<<<<"
 mv /etc/dnsmasq.conf /etc/dnsmasq.conf.original
-echo Renaming completed!
+echo ">>>>>>>>>>>>>>>>>>>> Renaming completed! <<<<<<<<<<<<<<<<<<<<"
 
 # Write new dnsmasq config to config file using IP range 192.168.0.41 until 192.168.0.60
 echo ">>>>>>>>>>>>>>>>>>>> Writing new config to dnsmasq.conf file... <<<<<<<<<<<<<<<<<<<<"

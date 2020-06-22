@@ -4,7 +4,7 @@
 For those of you who have tried to make an access point using a Raspberry Pi 
 may have stumbled upon the same issues as I have. My access point would stop 
 working from time to time and rather then keep repeating the same set-up I automated it.
-The ssid of this AP will be PI-AP and I will not broadcast the ssid 
+I will not broadcast the access points ssid 
 since I want to make a private hidden network. If you have an other use case feel free
 to edit the script.
 
@@ -26,6 +26,10 @@ You can use this command to do so:
 Next clone the repo into a chosen directory by using this command:
 
     git clone https://github.com/JornevanHelvert/raspberry-pi-AP-automation.git
+
+If you want to broadcast the ssid you can change `ignore_broadcast_ssid` to `0` 
+instead of `1` in the `/etc/hostapd/hostapd.conf` file. You can edit using any text 
+editor for example vim or nano.
 
 ### Execute the script:
 

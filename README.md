@@ -60,7 +60,12 @@ Developer and IoT is more of a hobby for me so feel free to contact me if you
 have any remark. It would be nice to learn from others and hopefully some of you will
 experience some benefits of this script as well. You can contact me on my e-mail address: `jorne.van.helvert@gmail.com`
 
-
-
-
-
+### Common Errors:
+ * After running `ifconfig` it appears wlan0 does not have an IP address. 
+ When you run `sudo systemctl status hostapd` you see the error message: `Failed to start hostapd.service: Unit hostapd.service is masked.`
+ 
+    Solution run these commands:
+        
+        sudo systemctl unmask hostapd
+        sudo systemctl enable hostapd
+        sudo systemctl start hostapd

@@ -10,35 +10,42 @@ to edit the script.
 
 ### Prerequisites:
 
-First of all make sure that your Pi has WiFi support. If you have a Raspberry Pi 3 or 
+* First of all make sure that your Pi has WiFi support. If you have a Raspberry Pi 3 or 
 newer this should not be a problem but you can check your device specs when you scroll down 
 to Raspberry Pi Boards and select your device [here](https://www.raspberrypi.org/products/)
 
-This script is based on Raspberry Pi OS (which used to be called Raspbian) so
+* This script is based on Raspberry Pi OS (which used to be called Raspbian) so
 make sure you have you have this or another debian based distro installed. You can
 download Raspberry Pi OS [here](https://www.raspberrypi.org/downloads/raspberry-pi-os/)
 
-If you want to clone the repo directly on your Raspberry Pi you need to install git.
+* Make sure your WLAN country is set you can do this by typing `sudo raspi-config` 
+and then choosing `4 Localisation Options` > `l4 Change WLAN Country` select your country from the list here.
+
+* If you want to clone the repo directly on your Raspberry Pi you need to install git.
 You can use this command to do so:
+
 
     sudo apt-get install git
 
-Next clone the repo into a chosen directory by using this command:
+* Next clone the repo into a chosen directory by using this command:
+
 
     git clone https://github.com/JornevanHelvert/raspberry-pi-AP-automation.git
 
-If you want to broadcast the ssid you can change `ignore_broadcast_ssid` to `0` 
+* If you want to broadcast the ssid you can change `ignore_broadcast_ssid` to `0` 
 instead of `1` in the `/etc/hostapd/hostapd.conf` file. You can edit using any text 
 editor for example vim or nano.
 
 ### Execute the script:
 
-First of all you need to make sure the script is executable for the root user.
+* First of all you need to make sure the script is executable for the root user.
 You can do this by using the following command in the raspberry-pi-AP-automation directory:
+
 
     sudo chmod +x ap_setup.sh
 
-Now you can run the script using the following command:
+* Now you can run the script using the following command:
+
 
     sudo ./ap_setup.sh
 
